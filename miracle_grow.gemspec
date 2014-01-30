@@ -6,11 +6,11 @@ require 'miracle_grow/version'
 Gem::Specification.new do |spec|
   spec.name          = "miracle_grow"
   spec.version       = MiracleGrow::VERSION
-  spec.authors       = ["Ben Lewis"]
+  spec.authors       = ["Ben Lewinsky", "The Watts", "Tyrinx", "Lucasarts"]
   spec.email         = ["bennlewis@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = "This is a gem to wrap the My Garden API"
+  spec.summary       = "This is a gem to wrap the My Garden API"
+  spec.homepage      = "https://github.com/VirginSoil/miracle_grow"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "minitest"
 end
