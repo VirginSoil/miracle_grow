@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "miracle_grow"
   spec.version       = MiracleGrow::VERSION
   spec.authors       = ["Ben Lewinsky", "The Watts", "Tyrinx", "Lucasarts"]
-  spec.email         = ["bennlewis@gmail.com"]
-  spec.description   = "This is a gem to wrap the My Garden API"
-  spec.summary       = "This is a gem to wrap the My Garden API"
+  spec.email         = ["bennlewis@gmail.com", "reg@nathanielwatts.com", "tyler.stephen.long@gmail.com", "lukemartinez@gmail.com"]
+  spec.description   = "This is a gem to wrap the Planting Season API"
+  spec.summary       = "This is a gem to wrap the Planting Season API"
   spec.homepage      = "https://github.com/VirginSoil/miracle_grow"
   spec.license       = "MIT"
 
@@ -21,4 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "minitest"
+
+  spec.add_dependency "json"
+  spec.add_dependency "faraday"
 end
