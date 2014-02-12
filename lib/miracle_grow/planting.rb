@@ -4,7 +4,7 @@ module MiracleGrow
     class << self
 
       def plantings_for_bed(id)
-        response = Faraday.get("#{request.host}/api/v1/plantings/for_bed/#{id}")
+        response = Faraday.get("#{env["SERVER_NAME"]}/api/v1/plantings/for_bed/#{id}")
         plantings = JSON.parse(response.body)
       end
 
