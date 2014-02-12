@@ -36,19 +36,20 @@ module MiracleGrow
         JSON.parse(response.body)
       end
 
-      def find_neighbors(bed)
-        if current_users_beds.length > 0
-          i = current_users_beds.index(bed)
-          if current_users_beds[i + 1]
-            nxt = current_users_beds[i + 1]
+      def find_neighbors(bed, uid)
+        beds = current_users_beds(uid)
+        if beds.length > 0
+          i = beds.index(bed)
+          if beds[i + 1]
+            nxt = beds[i + 1]
           else
-            nxt = current_users_beds[0]
+            nxt = beds[0]
           end
 
-          if current_users_beds[i-1]
-            prev = current_users_beds[i - 1]
+          if beds[i-1]
+            prev = beds[i - 1]
           else
-            prev = current_users_beds[-1]
+            prev = beds[-1]
           end
         end
         [nxt, prev]
