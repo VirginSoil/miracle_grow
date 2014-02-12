@@ -11,7 +11,7 @@ module MiracleGrow
 
       def taken(bed_id)
         plantings_for_bed(bed_id).map do |planting|
-          [planting["x_coord"].to_s, planting["y_coord"].to_s, planting["slug"].to_s]
+          [planting["x_coord"].to_s, planting["y_coord"].to_s, planting["slug"].to_s, planting["harvested"]]
         end
       end
 
