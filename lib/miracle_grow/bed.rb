@@ -2,7 +2,6 @@ module MiracleGrow
 
   class Bed
     class << self
-
       def find_bed(id)
         response = Faraday.get("http://localhost:8080/api/v1/beds/#{id}")
         JSON.parse(response.body)
