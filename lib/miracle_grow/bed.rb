@@ -3,36 +3,36 @@ module MiracleGrow
   class Bed
     class << self
       def find_bed(id)
-        response = Faraday.get("#{env["SERVER_NAME"]}/api/v1/beds/#{id}")
+        response = Faraday.get("#{ENV["HOST"]}/api/v1/beds/#{id}")
         JSON.parse(response.body)
       end
 
       def create_bed(params)
-        Faraday.post("#{env["SERVER_NAME"]}/api/v1/beds") do |req|
+        Faraday.post("#{ENV["HOST"]}/api/v1/beds") do |req|
           request = params
           req.body = params
         end
       end
 
       def patch_bed(params)
-        Faraday.put("#{env["SERVER_NAME"]}/api/v1/beds/#{(params[:id])}") do |req|
+        Faraday.put("#{ENV["HOST"]}/api/v1/beds/#{(params[:id])}") do |req|
           request = params
           req.body = params
         end
       end
 
       def current_users_beds(uid)
-        response = Faraday.get("#{env["SERVER_NAME"]}/api/v1/beds/for_user/#{uid}")
+        response = Faraday.get("#{ENV["HOST"]}/api/v1/beds/for_user/#{uid}")
         JSON.parse(response.body)
       end
 
       def default_bed(uid)
-        response = Faraday.get("#{env["SERVER_NAME"]}/api/v1/beds/default_for_user/#{uid}")
+        response = Faraday.get("#{ENV["HOST"]}/api/v1/beds/default_for_user/#{uid}")
         JSON.parse(response.body)
       end
 
       def show_bed(id)
-        response = Faraday.get("#{env["SERVER_NAME"]}/api/v1/beds/#{id}")
+        response = Faraday.get("#{ENV["HOST"]}/api/v1/beds/#{id}")
         JSON.parse(response.body)
       end
 
