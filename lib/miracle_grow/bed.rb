@@ -41,9 +41,9 @@ module MiracleGrow
         if current_users_beds.length > 0
           i = current_users_beds.index(bed)
           if current_users_beds[i + 1]
-            next = current_users_beds[i + 1]
+            nxt = current_users_beds[i + 1]
           else
-            next = current_users_beds[0]
+            nxt = current_users_beds[0]
           end
 
           if current_users_beds[i-1]
@@ -52,7 +52,7 @@ module MiracleGrow
             prev = current_users_beds[-1]
           end
         end
-        [next, prev]
+        [nxt, prev]
       end
 
     end
