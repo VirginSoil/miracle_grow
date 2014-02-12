@@ -36,7 +36,7 @@ module MiracleGrow
         JSON.parse(response.body)
       end
 
-      def find_neighbors
+      def find_neighbors(bed)
         if current_users_beds.length > 0
           i = current_users_beds.index(bed)
           if current_users_beds[i + 1]
