@@ -2,7 +2,7 @@ module MiracleGrow
 
   class Bed
     class << self
-      ENV['HOST'] ||= "http://107.170.7.85"
+      ENV['HOST'] ||= "http://plantingseason.tk"
 
       def find_bed(id)
         response = Faraday.get("#{ENV["HOST"]}/api/v1/beds/#{id}")
